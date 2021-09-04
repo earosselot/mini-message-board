@@ -1,0 +1,9 @@
+extends layout
+
+block content
+    h1= title
+    p Add new message
+    form(method='POST' action='/new')
+        input(type='text' name='user' id='user' placeholder='Name...')
+        input(type='text' name='text' id='text' placeholder='Add new message')
+        button(type='submit') Ok

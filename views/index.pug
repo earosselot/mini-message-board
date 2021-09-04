@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  div
+    each message in messages
+      div
+        header= message.user
+        content= message.text
+        footer= message.added.toLocaleString()
+  button(onclick="window.location.href='/new'") Add new message
